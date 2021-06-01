@@ -1,0 +1,17 @@
+message1:
+  title: メッセージ1
+  body: |-
+    あああ
+    いいい
+    ううう
+  schedule: "0 9 * * *"
+  channel: channel1
+
+minutely:
+  title: 毎分
+  body: |-
+    aaa
+    iii
+    uuu
+  schedule: "* * * * *"
+  channel: channel2
