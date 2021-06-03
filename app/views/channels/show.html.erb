@@ -1,14 +1,11 @@
-<p id="notice"><%= notice %></p>
+<div class="column is-three-fifths is-offset-one-fifth">
+  <p>
+    <strong>Name:</strong>
+    <%= @channel.name %>
+  </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @channel.name %>
-</p>
-
-<p>
-  <strong>Webhook url:</strong>
-  <%= @channel.webhook_url %>
-</p>
-
-<%= link_to 'Edit', edit_channel_path(@channel) %> |
-<%= link_to 'Back', channels_path %>
+  <p>
+    <strong>Webhook url:</strong>
+    <%= @channel.webhook_url %>
+  </p>
+</div>

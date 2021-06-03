@@ -1,24 +1,21 @@
-<p id="notice"><%= notice %></p>
+<div class="column is-three-fifths is-offset-one-fifth">
+  <p>
+    <strong>Title:</strong>
+    <%= @message.title %>
+  </p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @message.title %>
-</p>
+  <p>
+    <strong>Schedule:</strong>
+    <%= @message.schedule %>
+  </p>
 
-<p>
-  <strong>Schedule:</strong>
-  <%= @message.schedule %>
-</p>
+  <p>
+    <strong>Body:</strong>
+    <%= simple_format @message.body %>
+  </p>
 
-<p>
-  <strong>Body:</strong>
-  <%= @message.body %>
-</p>
-
-<p>
-  <strong>Channel:</strong>
-  <%= @message.channel_id %>
-</p>
-
-<%= link_to 'Edit', edit_message_path(@message) %> |
-<%= link_to 'Back', messages_path %>
+  <p>
+    <strong>Channel:</strong>
+    <%= link_to @message.channel.name, @message.channel %>
+  </p>
+</div>
