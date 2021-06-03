@@ -1,24 +1,16 @@
-# README
+# Discord Reminder
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Discord Reminder is a tool that periodically reminds you to Discord.
 
-Things you may want to cover:
+## Install
 
-* Ruby version
+```
+$ bin/setup
+$ rails server
+```
 
-* System dependencies
+## Test
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+$ rails test:all
+```
