@@ -13,12 +13,20 @@
   <tbody>
     <% @messages.each do |message| %>
       <tr>
-        <td><%= link_to message.title, message %></td>
+        <td><%= message.title %></td>
         <td><%= message.schedule %></td>
         <td><%= truncate message.body %></td>
         <td><%= message.channel.name %></td>
-        <td width="2%"><%= link_to 'Edit', edit_message_path(message), class: 'button is-small' %></td>
-        <td width="2%"><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button is-small' %></td>
+        <td width="2%">
+          <%= link_to edit_message_path(message), class: 'button is-small' do %>
+            <i class="fas fa-edit"></i>
+          <% end %>
+        </td>
+        <td width="2%">
+          <%= link_to message, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button is-small' do %>
+            <i class="fas fa-trash-alt"></i>
+          <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>
