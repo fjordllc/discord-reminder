@@ -1,5 +1,6 @@
 <% if object.errors.any? %>
-  <div class="errors">
+  <div class="errors notification is-danger">
+    <div class="delete"></div>
     <h3>入力内容にエラーがありました</h3>
     <ul>
       <% object.errors.full_messages.each do |message| %>

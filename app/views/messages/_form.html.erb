@@ -1,6 +1,5 @@
-<%= render 'errors', object: message %>
-
-<%= form_with(model: message) do |form| %>
+<%= form_with model: message, local: true, html: { name: 'message' } do |form| %>
+  <%= render 'errors', object: message %>
   <div class="field">
     <div class="label">
       <%= form.label :title %>

@@ -1,6 +1,5 @@
-<%= render 'errors', object: channel %>
-
-<%= form_with(model: channel) do |form| %>
+<%= form_with model: channel, local: true, html: { name: 'channel' } do |form| %>
+  <%= render 'errors', object: channel %>
   <div class="field">
     <div class="label">
       <%= form.label :name %>
@@ -9,6 +8,7 @@
       <%= form.text_field :name, class: 'input' %>
     </div>
   </div>
+
   <div class="field">
     <div class="label">
       <%= form.label :webhook_url %>
@@ -17,6 +17,7 @@
       <%= form.text_area :webhook_url, class: 'input'  %>
     </div>
   </div>
+
   <div class="field">
     <div class="control">
       <%= form.submit 'Submit', class: 'button is-link' %>
