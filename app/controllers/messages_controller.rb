@@ -1,13 +1,11 @@
 # frozen_string_literal: true
 
 class MessagesController < ApplicationController
-  before_action :set_message, only: %i[show edit update destroy]
+  before_action :set_message, only: %i[edit update destroy]
 
   def index
     @messages = Message.all
   end
-
-  def show; end
 
   def new
     @message = Message.new
@@ -19,7 +17,7 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
 
     if @message.save
-      redirect_to messages_path, notice: 'Message was successfully created.'
+      redirect_to edit_message_path(@message), notice: 'Message was successfully created.'
     else
       render :new, status: :unprocessable_entity
     end
@@ -27,7 +25,7 @@ class MessagesController < ApplicationController
 
   def update
     if @message.update(message_params)
-      redirect_to messages_path, notice: 'Message was successfully updated.'
+      redirect_to edit_message_path(@message), notice: 'Message was successfully updated.'
     else
       render :edit, status: :unprocessable_entity
     end
@@ -45,6 +43,11 @@ class MessagesController < ApplicationController
   end
 
   def message_params
-    params.require(:message).permit(:title, :schedule, :body, :channel_id)
+    params.require(:message).permit(
+      :title,
+      :schedule,
+      :body,
+      :channel_id
+    )
   end
 end

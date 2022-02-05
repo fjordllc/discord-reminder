@@ -13,6 +13,14 @@
         <%= link_to 'Messages', messages_path, class: 'navbar-item' %>
         <%= link_to 'Channels', channels_path, class: 'navbar-item' %>
       </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <%= link_to edit_setting_path, class: 'navbar-item' do %>
+            <i class="fas fa-cog"></i>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
 </nav>

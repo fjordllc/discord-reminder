@@ -1,5 +1,5 @@
 <% 1.upto(5).each do |n| %>
 channel<%= n %>:
-  name: チャンネル<%= n %>
+  name: Channel <%= n %>
   webhook_url: https://channel<%= n %>.reminder.discord.fjord.jp
 <% end %>

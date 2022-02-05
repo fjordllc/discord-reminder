@@ -1,17 +1,17 @@
 message1:
-  title: メッセージ1
+  title: Message 1
   body: |-
-    あああ
-    いいい
-    ううう
+    aaa
+    bbb
+    ccc
   schedule: "0 9 * * *"
   channel: channel1
 
 minutely:
-  title: 毎分
+  title: Every minutes
   body: |-
-    aaa
-    iii
-    uuu
+    ddd
+    eee
+    fff
   schedule: "* * * * *"
   channel: channel2
