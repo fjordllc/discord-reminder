@@ -1,0 +1,26 @@
+<%= form_with model: setting, local: true, html: { name: 'setting' } do |form| %>
+  <%= render 'errors', object: setting %>
+  <div class="field">
+    <div class="label">
+      <%= form.label :basic_auth_user %>
+    </div>
+    <div class="control">
+      <%= form.text_field :basic_auth_user, class: 'input' %>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="label">
+      <%= form.label :basic_auth_password %>
+    </div>
+    <div class="control">
+      <%= form.text_field :basic_auth_password , class: 'input' %>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="control">
+      <%= form.submit 'Submit', class: 'button is-link' %>
+    </div>
+  </div>
+<% end %>
