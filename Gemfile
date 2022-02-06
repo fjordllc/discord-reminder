@@ -20,6 +20,7 @@ end
 
 group :development do
   gem 'rubocop-fjord', require: false
+  gem 'rubocop-rails', require: false
   gem 'web-console', '>= 4.1.0'
 end
 
