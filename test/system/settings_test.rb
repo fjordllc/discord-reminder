@@ -11,6 +11,7 @@ class SettingsTest < ApplicationSystemTestCase
     within 'form[name=setting]' do
       fill_in 'setting[basic_auth_user]', with: 'testuser'
       fill_in 'setting[basic_auth_password]', with: 'testpassword'
+      select 'Tokyo', from: 'setting[timezone]'
       click_button 'Submit'
     end
 

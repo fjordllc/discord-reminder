@@ -19,7 +19,7 @@ class SettingController < ApplicationController
   private
 
   def initialize_setting
-    Setting.create!(basic_auth_user: 'user', basic_auth_password: 'test') if Setting.count.zero?
+    Setting.create!(basic_auth_user: 'user', basic_auth_password: 'test', timezone: 'Tokyo') if Setting.count.zero?
   end
 
   def setting_params
