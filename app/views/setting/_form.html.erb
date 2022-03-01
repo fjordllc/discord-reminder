@@ -19,6 +19,15 @@
   </div>
 
   <div class="field">
+    <div class="label">
+      <%= form.label :timezone %>
+    </div>
+    <div class="select">
+      <%= form.time_zone_select :timezone %>
+    </div>
+  </div>
+
+  <div class="field">
     <div class="control">
       <%= form.submit 'Submit', class: 'button is-link' %>
     </div>

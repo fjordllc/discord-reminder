@@ -9,7 +9,7 @@ class Executor
 
   def execute
     Message.all.find_each do |message|
-      send_message(message) if When::Cron.new(message.schedule) == Time.zone.now
+      send_message(message) if When::Cron.new(message.schedule) == Setting.now
     end
   end
 

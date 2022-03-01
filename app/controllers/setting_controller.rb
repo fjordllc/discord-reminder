@@ -25,7 +25,8 @@ class SettingController < ApplicationController
   def setting_params
     params.require(:setting).permit(
       :basic_auth_user,
-      :basic_auth_password
+      :basic_auth_password,
+      :timezone
     )
   end
 end
